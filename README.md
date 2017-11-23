@@ -26,6 +26,6 @@ Uses [p5.js](https://p5js.org/)
 * [felt-tip simulated line function from Nikolaus Gradwohl](https://www.local-guru.net/blog/2010/4/23/simulation-of-hand-drawn-lines-in-processing)
 * Code for saving canvas as image courtesy of http://stackoverflow.com/questions/12796513/html5-canvas-to-png-file
 * Palettes from colourlovers:
-** [Giant Goldfish by manekineko](http://www.colourlovers.com/palette/92095/Giant_Goldfish)
-** [(???)by sugar!](http://www.colourlovers.com/palette/629637/())
-** [cheer up emo kid by electrikmonk](http://www.colourlovers.com/palette/1930/cheer_up_emo_kid)
+* * [Giant Goldfish by manekineko](http://www.colourlovers.com/palette/92095/Giant_Goldfish)
+* * [(???)by sugar!](http://www.colourlovers.com/palette/629637/())
+* * [cheer up emo kid by electrikmonk](http://www.colourlovers.com/palette/1930/cheer_up_emo_kid)
