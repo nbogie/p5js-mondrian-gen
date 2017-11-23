@@ -1,8 +1,4 @@
 "use strict";
-//Palettes:
-//Giant Goldfishby manekineko: http://www.colourlovers.com/palette/92095/Giant_Goldfish
-//(???)by sugar!: http://www.colourlovers.com/palette/629637/()
-//cheer up emo kid by electrikmonk: http://www.colourlovers.com/palette/1930/cheer_up_emo_kid
 
 var paletteStrs = [
   "yellow,yellow,gray",
