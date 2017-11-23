@@ -5,7 +5,14 @@ var paletteStrs = [
   "#c70000,#f4b600,#2d2bb4,black",
   "#FE4365,#FC9D9A,#F9CDAD,#C8C8A9,#83AF9B,#FE4365,#FC9D9A,#F9CDAD",
   "#69D2E7,#A7DBD8,#E0E4CC,#F38630,#FA6900,#69D2E7,#A7DBD8,#E0E4CC",
-  "#556270,#4ECDC4,#C7F464,#FF6B6B,#C44D58,#556270,#4ECDC4,#C7F464"
+  "#556270,#4ECDC4,#C7F464,#FF6B6B,#C44D58,#556270,#4ECDC4,#C7F464",
+  "#E94E77,#D68189,#C6A49A,#C6E5D9,#F4EAD5", // ["LoversInJapan by lovelyrita"](http://www.colourlovers.com/palette/867235/LoversInJapan)
+  "#00A0B0,#6A4A3C,#CC333F,#EB6841,#EDC951", // ["Ocean Five by DESIGNJUNKEE"](http://www.colourlovers.com/palette/1473/Ocean_Five)
+  "#B9D7D9,#668284,#2A2829,#493736,#7B3B3B", // "Entrapped InAPalette by annajak",
+  "#D1F2A5,#EFFAB4,#FFC48C,#FF9F80,#F56991", // "mellon ball surprise by Skyblue2u"
+  "#00A8C6,#40C0CB,#F9F2E7,#AEE239,#8FBE00"  // "fresh cut day by electrikmonk"
+    
+  
 ];
 var useFeltTip = false;
 
@@ -232,3 +239,4 @@ function ftrect(x1, y1, w, h) {
   ftline(x1 + w, y1, x1 + w, y1 + h);
   ftline(x1, y1 + h, x1 + w, y1 + h);
 }
+

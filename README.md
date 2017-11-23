@@ -29,3 +29,8 @@ Uses [p5.js](https://p5js.org/)
 * * [Giant Goldfish by manekineko](http://www.colourlovers.com/palette/92095/Giant_Goldfish)
 * * [(???)by sugar!](http://www.colourlovers.com/palette/629637/())
 * * [cheer up emo kid by electrikmonk](http://www.colourlovers.com/palette/1930/cheer_up_emo_kid)
+* * ["LoversInJapan by lovelyrita"](http://www.colourlovers.com/palette/867235/LoversInJapan)
+* * ["Ocean Five by DESIGNJUNKEE"](http://www.colourlovers.com/palette/1473/Ocean_Five)
+* * "Entrapped InAPalette by annajak"
+* * "mellon ball surprise by Skyblue2u"
+* * "fresh cut day by electrikmonk"
