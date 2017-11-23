@@ -24,12 +24,12 @@ Uses [p5.js](https://p5js.org/)
 * ![screenshot](docs/screenshots/mymondrian11.png)
 * ![screenshot](docs/screenshots/mymondrian12.png)
 ## Collages of screenshots
-* ![screenshot](docs/screenshots/collage1.png)
-* ![screenshot](docs/screenshots/collage2.png)
-* ![screenshot](docs/screenshots/collage3.png)
-* ![screenshot](docs/screenshots/collage4.png)
-* ![screenshot](docs/screenshots/collage5.png)
-* ![screenshot](docs/screenshots/collage6.png)
+* ![screenshot](docs/screenshots/collage1.jpg)
+* ![screenshot](docs/screenshots/collage2.jpg)
+* ![screenshot](docs/screenshots/collage3.jpg)
+* ![screenshot](docs/screenshots/collage4.jpg)
+* ![screenshot](docs/screenshots/collage5.jpg)
+* ![screenshot](docs/screenshots/collage6.jpg)
 
 ## Credits
 
