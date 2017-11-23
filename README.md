@@ -39,6 +39,9 @@ To unlock the grid or colours, reload the page (currently)
 * ![screenshot](docs/screenshots/collage4.jpg)
 * ![screenshot](docs/screenshots/collage5.jpg)
 * ![screenshot](docs/screenshots/collage6.jpg)
+* ![screenshot](docs/screenshots/collage7.jpg)
+* ![screenshot](docs/screenshots/collage8.jpg)
+* ![screenshot](docs/screenshots/collage9.jpg)
 
 ## Credits
 
