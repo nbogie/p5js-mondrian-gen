@@ -135,3 +135,20 @@ function oneUpto(mx) {
 function randomQuantised(spacing, mx) {
   return spacing * floor(random(0, mx / spacing));
 }
+
+
+/* Code courtesy of http://stackoverflow.com/questions/12796513/html5-canvas-to-png-file*/  
+function saveCanvas() {
+  var image = canvas.toDataURL("image/png");
+  /* Change MIME type to trick the browser to downlaod the file instead of displaying it */
+  image = image.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
+  /* In addition to <a>'s "download" attribute, you can define HTTP-style headers */
+  image = image.replace(/^data:application\/octet-stream/, 'data:application/octet-stream;headers=Content-Disposition%3A%20attachment%3B%20filename=mondrian.png');
+  this.href = image;
+}
+
+function keyPressed(){
+  if (key == "S"){
+    saveCanvas();
+  }
+}

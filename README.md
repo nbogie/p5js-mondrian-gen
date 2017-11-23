@@ -1,4 +1,4 @@
-# p5-mondrian-gen
+# p5js-mondrian-gen
 Very rough Mondrian-inspired image generator.  It doesn't try too hard to imitate his stuff.
 
 Uses p5.js
@@ -16,3 +16,11 @@ Uses p5.js
 * ![screenshot](docs/screenshots/mymondrian7.png)
 * ![screenshot](docs/screenshots/mymondrian8.png)
 * ![screenshot](docs/screenshots/mymondrian9.png)
+
+## Credits
+
+* Code for saving canvas as image courtesy of http://stackoverflow.com/questions/12796513/html5-canvas-to-png-file
+* Palettes from colourlovers:
+** Giant Goldfishby manekineko: http://www.colourlovers.com/palette/92095/Giant_Goldfish
+** (???)by sugar!: http://www.colourlovers.com/palette/629637/()
+** cheer up emo kid by electrikmonk: http://www.colourlovers.com/palette/1930/cheer_up_emo_kid
