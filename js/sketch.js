@@ -16,6 +16,11 @@ var paletteStrs = [
 ];
 var useFeltTip = false;
 
+var gPlanLocked;
+var gPlanPrevious;
+var gColorsLocked;
+var gColorsPrevious;
+
 function setup() {
   var limit = min(windowWidth, windowHeight);
   var d = min(limit, 320);
@@ -30,7 +35,6 @@ function draw() {
   randomSeed(seed);
 
   useFeltTip = random() > 0.5;
-  var colors = random(paletteStrs).split(",");
   var presets = {
     chip: {
       hs: [10, 50, 60, 110, 180, 230, 320, 330],
@@ -49,10 +53,15 @@ function draw() {
   };
   var preset = presets.chip;
   var margin = 20;
-  var plan = planMondrian({ x: margin, y: margin }, width - margin * 2, seed);
+  
+  var plan = gPlanLocked? gPlanLocked : planMondrian({ x: margin, y: margin }, width - margin * 2, seed);
+  var colors = gColorsLocked ? gColorsLocked : random(paletteStrs).split(",");  
+  
+  console.log('plan is: ', plan);
+
   drawMondrianFromPlan(colors, plan);
-  console.log(plan);
-  //drawMondrian(320, preset.colors, preset.hs, preset.vs);
+  gPlanPrevious = plan;
+  gColorsPrevious = colors;
 }
 
 function planMondrian(pos, dim, seed, horizs, verts) {
@@ -179,6 +188,14 @@ function randomQuantised(spacing, mx) {
   return spacing * floor(random(0, mx / spacing));
 }
 
+function lockPlan() {
+  gPlanLocked = gPlanPrevious;
+}
+
+function lockColors() {
+  gColorsLocked = gColorsPrevious;
+}
+
 /* Code courtesy of http://stackoverflow.com/questions/12796513/html5-canvas-to-png-file*/
 
 function saveCanvas() {
@@ -194,8 +211,18 @@ function saveCanvas() {
 }
 
 function keyPressed() {
-  if (key == "S") {
-    saveCanvas();
+  switch(key) {
+    case "S": 
+      saveCanvas();
+      break;
+    case "L": 
+      lockPlan();
+      break;
+    case "C": 
+      lockColors();
+      break;
+    default: 
+      break;
   }
 }
 

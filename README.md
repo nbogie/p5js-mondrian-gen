@@ -5,9 +5,18 @@ Very rough Mondrian-inspired image generator.  It doesn't try too hard to imitat
 
 Uses [p5.js](https://p5js.org/)
 
-
+## Usage
 
 [Try it out here][https://nbogie.github.io/p5js-mondrian-gen/]
+
+You can click to generate another image with the current settings, 
+
+and you can press: 
+* 'l' to lock the grid layout
+* 'c' to lock the colour palette
+* 's' to save the canvas to image
+
+To unlock the grid or colours, reload the page (currently)
 
 ## Screenshots
 
