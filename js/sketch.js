@@ -13,7 +13,12 @@ var paletteStrs = [
 ];
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  var limit = min(windowWidth, windowHeight);
+  var d = min(limit, 320);
+  var w1 = d;
+  var h1 = d;
+  
+  createCanvas(w1, h1);
 }
 
 function draw() {
@@ -38,7 +43,8 @@ function draw() {
     }
   };
   var preset = presets.chip;
-  var plan = planMondrian({x: 20, y: 20}, 320, seed);
+  var margin = 20;
+  var plan = planMondrian({x: margin, y: margin}, width-(margin*2), seed);
   drawMondrianFromPlan(colors, plan);
   console.log(plan);
   //drawMondrian(320, preset.colors, preset.hs, preset.vs);
