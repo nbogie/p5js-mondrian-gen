@@ -27,6 +27,9 @@ Uses [p5.js](https://p5js.org/)
 * ![screenshot](docs/screenshots/collage1.png)
 * ![screenshot](docs/screenshots/collage2.png)
 * ![screenshot](docs/screenshots/collage3.png)
+* ![screenshot](docs/screenshots/collage4.png)
+* ![screenshot](docs/screenshots/collage5.png)
+* ![screenshot](docs/screenshots/collage6.png)
 
 ## Credits
 
