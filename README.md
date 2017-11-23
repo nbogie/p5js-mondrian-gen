@@ -20,6 +20,10 @@ Uses [p5.js](https://p5js.org/)
 * ![screenshot](docs/screenshots/mymondrian7.png)
 * ![screenshot](docs/screenshots/mymondrian8.png)
 * ![screenshot](docs/screenshots/mymondrian9.png)
+* ![screenshot](docs/screenshots/mymondrian10.png)
+* ![screenshot](docs/screenshots/mymondrian11.png)
+* ![screenshot](docs/screenshots/mymondrian12.png)
+* ![screenshot](docs/screenshots/mymondrian13.png)
 
 ## Credits
 
