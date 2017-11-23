@@ -23,6 +23,10 @@ Uses [p5.js](https://p5js.org/)
 * ![screenshot](docs/screenshots/mymondrian10.png)
 * ![screenshot](docs/screenshots/mymondrian11.png)
 * ![screenshot](docs/screenshots/mymondrian12.png)
+## Collages of screenshots
+* ![screenshot](docs/screenshots/collage1.png)
+* ![screenshot](docs/screenshots/collage2.png)
+* ![screenshot](docs/screenshots/collage3.png)
 
 ## Credits
 
