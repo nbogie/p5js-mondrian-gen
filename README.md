@@ -1,7 +1,9 @@
 # p5-mondrian-gen
-Mondrian-inspired image generator.  doesn't try too hard to imitate his stuff.
+Very rough Mondrian-inspired image generator.  It doesn't try too hard to imitate his stuff.
 
-Screenshots
+Uses p5.js
+
+## Screenshots
 
 * ![screenshot](docs/screenshots/mymondrian1.png)
 * ![screenshot](docs/screenshots/mymondrian2.png)
