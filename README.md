@@ -1,7 +1,11 @@
 # p5js-mondrian-gen
 Very rough Mondrian-inspired image generator.  It doesn't try too hard to imitate his stuff.
 
-Uses p5.js
+[Try it out here](https://nbogie.github.io/p5js-mondrian-gen/)
+
+Uses [p5.js](https://p5js.org/)
+
+
 
 [Try it out here][https://nbogie.github.io/p5js-mondrian-gen/]
 
