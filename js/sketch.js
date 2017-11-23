@@ -38,20 +38,15 @@ function draw() {
   var presets = {
     chip: {
       hs: [10, 50, 60, 110, 180, 230, 320, 330],
-      vs: [10, 190, 230, 240, 250, 260, 280, 330],
-      colors: [
-        "#69D2E7",
-        "#A7DBD8",
-        "#E0E4CC",
-        "#F38630",
-        "#FA6900",
-        "#69D2E7",
-        "#A7DBD8",
-        "#E0E4CC"
-      ]
+      vs: [10, 190, 230, 240, 250, 260, 280, 330]
+    }, 
+    geom: {
+      hs: [20, 20, 40, 160, 160, 180, 280, 300],
+      vs: [20, 20, 20, 80, 120, 140, 220, 300]
     }
   };
-  var preset = presets.chip;
+
+  var preset = presets.geom;
   var margin = 20;
   
   var plan = gPlanLocked? gPlanLocked : planMondrian({ x: margin, y: margin }, width - margin * 2, seed);
