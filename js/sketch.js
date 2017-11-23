@@ -5,6 +5,7 @@
 //cheer up emo kid by electrikmonk: http://www.colourlovers.com/palette/1930/cheer_up_emo_kid
 
 var paletteStrs = [
+  "yellow,yellow,gray",
   "#c70000,#f4b600,#2d2bb4,black",
   "#FE4365,#FC9D9A,#F9CDAD,#C8C8A9,#83AF9B,#FE4365,#FC9D9A,#F9CDAD",
   "#69D2E7,#A7DBD8,#E0E4CC,#F38630,#FA6900,#69D2E7,#A7DBD8,#E0E4CC",
