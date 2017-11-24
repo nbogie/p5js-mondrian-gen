@@ -34,7 +34,7 @@ function draw() {
   var seed = random(0, 99999999);
   randomSeed(seed);
 
-  useFeltTip = random() > 0.5;
+  useFeltTip = random() > 0.1;
   var presets = {
     chip: {
       hs: [10, 50, 60, 110, 180, 230, 320, 330],
@@ -223,38 +223,52 @@ function keyPressed() {
 
 //felt-tip simulated lines, from Nikolaus Gradwohl
 //https://www.local-guru.net/blog/2010/4/23/simulation-of-hand-drawn-lines-in-processing
-function ftline(x1, y1, x2, y2) {
+function oneWavyLine(x1, y1, x2, y2, amt) {  
+  noFill();
   beginShape();
-  vertex(x1 + random(-2, 2), y1 + random(-2, 2));
-  curveVertex(x1 + random(-2, 2), y1 + random(-2, 2));
-  curveVertex(
-    x1 + (x2 - x1) / 3 + random(-2, 2),
-    y1 + (y2 - y1) / 3 + random(-2, 2)
-  );
-  curveVertex(
-    x1 + 2 * (x2 - x1) / 3 + random(-2, 2),
-    y1 + 2 * (y2 - y1) / 3 + random(-2, 2)
-  );
-  curveVertex(x2 + random(-2, 2), y2 + random(-2, 2));
-  vertex(x2 + random(-2, 2), y2 + random(-2, 2));
-  endShape();
+  var dotTheEnds = false;
+  var dx = x2 - x1;
+  var dy = y2 - y1;
 
-  beginShape();
-  vertex(x1 + random(-1, 1), y1 + random(-1, 1));
-  curveVertex(x1 + random(-1, 1), y1 + random(-1, 1));
+  if (dotTheEnds) {
+    var r = 3;
+    fill("black");
+    ellipseMode(CENTER);
+    ellipse(x1, y1, r, r);
+    ellipse(x2, y2, r, r);
+    noFill();
+  }
+  //start of line
+  vertex(x1 + random(-amt, amt), y1 + random(-amt, amt));
+
+  //at the start
+  curveVertex(x1 + random(-amt, amt), y1 + random(-amt, amt));
+
+  //1/3 of the way along
+  curveVertex(x1 + dx / 3 + random(-amt, amt), y1 + dy / 3 + random(-amt, amt));
+
+  //2/3 of the way along
   curveVertex(
-    x1 + (x2 - x1) / 3 + random(-1, 1),
-    y1 + (y2 - y1) / 3 + random(-1, 1)
+    x1 + 2 * dx / 3 + random(-amt, amt),
+    y1 + 2 * dy / 3 + random(-amt, amt)
   );
-  curveVertex(
-    x1 + 2 * (x2 - x1) / 3 + random(-1, 1),
-    y1 + 2 * (y2 - y1) / 3 + random(-1, 1)
-  );
-  curveVertex(x2 + random(-1, 1), y2 + random(-1, 1));
-  vertex(x2 + random(-1, 1), y2 + random(-1, 1));
+
+  //at the destination
+  curveVertex(x2 + random(-amt, amt), y2 + random(-amt, amt));
+
+  //end of line
+  vertex(x2 + random(-amt, amt), y2 + random(-amt, amt));
+
   endShape();
 }
 
+function ftline(x1, y1, x2, y2) {
+  [1, 2].forEach(function(variance) {
+    strokeWeight(1);
+    stroke("black");
+    oneWavyLine(x1, y1, x2, y2, variance);
+  });
+}
 function ftrect(x1, y1, w, h) {
   ftline(x1, y1, x1, y1 + h);
   ftline(x1, y1, x1 + w, y1);
