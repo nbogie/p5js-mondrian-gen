@@ -61,7 +61,7 @@ function draw() {
   
   var plan = gPlanLocked? gPlanLocked : planMondrian({ x: margin, y: margin }, width - margin * 2, seed);
   
-  var palette = gPaletteLocked ? gPaletteLocked : random(palettes.slice(0,3));
+  var palette = gPaletteLocked ? gPaletteLocked : random(palettes);
   var colors = palette.str.split(",");
   console.log("palette is ", palette.name, " and plan is: ", plan);
 
