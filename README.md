@@ -56,3 +56,7 @@ To unlock the grid or colours, reload the page (currently)
 * * "Entrapped InAPalette by annajak"
 * * "mellon ball surprise by Skyblue2u"
 * * "fresh cut day by electrikmonk"
+
+# TODO
+
+* add a keypress that stores the current design in a list, and another that takes all stored designs and makes them into a collage.  "save image" should save the collage out to an image file.
