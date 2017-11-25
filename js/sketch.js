@@ -1,25 +1,35 @@
 "use strict";
 
-var paletteStrs = [
-  "yellow,yellow,gray",
-  "#c70000,#f4b600,#2d2bb4,black",
-  "#FE4365,#FC9D9A,#F9CDAD,#C8C8A9,#83AF9B,#FE4365,#FC9D9A,#F9CDAD",
-  "#69D2E7,#A7DBD8,#E0E4CC,#F38630,#FA6900,#69D2E7,#A7DBD8,#E0E4CC",
-  "#556270,#4ECDC4,#C7F464,#FF6B6B,#C44D58,#556270,#4ECDC4,#C7F464",
-  "#E94E77,#D68189,#C6A49A,#C6E5D9,#F4EAD5", // ["LoversInJapan by lovelyrita"](http://www.colourlovers.com/palette/867235/LoversInJapan)
-  "#00A0B0,#6A4A3C,#CC333F,#EB6841,#EDC951", // ["Ocean Five by DESIGNJUNKEE"](http://www.colourlovers.com/palette/1473/Ocean_Five)
-  "#B9D7D9,#668284,#2A2829,#493736,#7B3B3B", // "Entrapped InAPalette by annajak",
-  "#D1F2A5,#EFFAB4,#FFC48C,#FF9F80,#F56991", // "mellon ball surprise by Skyblue2u"
-  "#00A8C6,#40C0CB,#F9F2E7,#AEE239,#8FBE00"  // "fresh cut day by electrikmonk"
-    
-  
-];
+var palettes = [
+    {name: "Acoustic Hail by manekineko", str: "#FFE577,#C2BEB9,#F99767,#F6705F,#B0A6A6,#FFE577,#C2BEB9,#F99767"},  // http://www.colourlovers.com/palette/3740326/Acoustic_Hail
+    {name: "Five Chameleons by manekineko", str: "#C3E216,#535527,#474A26,#22DD9B,#EEDB35,#C3E216,#535527,#474A26"},  // http://www.colourlovers.com/palette/3751540/Five_Chameleons
+    {name: "1001 stories ", str: "#F8B195,#F67280,#C06C84,#6C5B7B,#355C7D,#F8B195,#F67280,#C06C84"}, //http://www.colourlovers.com/palette/1811244/1001_Stories
+    {name: "papua new guinea", str: "#5E412F,#FCEBB6,#78C0A8,#F07818,#F0A830,#5E412F,#FCEBB6,#78C0A8"}, // http://www.colourlovers.com/palette/919313/Papua_New_Guinea
+    {name: "trance", str: "#452632,#91204D,#E4844A,#E8BF56,#E2F7CE,#452632,#91204D,#E4844A"}, // http://www.colourlovers.com/palette/594151/t_r_a_n_c_e
+    {name: "koi carp", str: "#F0D8A8,#3D1C00,#86B8B1,#F2D694,#FA2A00,#F0D8A8,#3D1C00,#86B8B1"}, // http://www.colourlovers.com/palette/656966/Koi_Carp
+    {name: "dance to forget", str: "#FF4E50,#FC913A,#F9D423,#EDE574,#E1F5C4,#FF4E50,#FC913A,#F9D423"}, // http://www.colourlovers.com/palette/937624/Dance_To_Forget
+    {name: "coup de grace", str: "#99B898,#FECEA8,#FF847C,#E84A5F,#2A363B,#99B898,#FECEA8,#FF847C"}, // http://www.colourlovers.com/palette/1098589/coup_de_gr%C3%A2ce
+    {name: "wasabi suicide", str: "#FF4242,#F4FAD2,#D4EE5E,#E1EDB9,#F0F2EB,#FF4242,#F4FAD2,#D4EE5E"}, //wasabi suicide http://www.colourlovers.com/palette/482416/Wasabi_Suicide
+    {name: "yellow and gray", str: "yellow,yellow,gray"},
+    {name: "mondrian-ish", str: "#c70000,#f4b600,#2d2bb4,black"},
+    {name: "??? by sugar!", str: "#FE4365,#FC9D9A,#F9CDAD,#C8C8A9,#83AF9B,#FE4365,#FC9D9A,#F9CDAD"}, // http://www.colourlovers.com/palette/629637/()
+    {name: "Giant Goldfish by manekineko", str: "#69D2E7,#A7DBD8,#E0E4CC,#F38630,#FA6900,#69D2E7,#A7DBD8,#E0E4CC"}, // http://www.colourlovers.com/palette/92095/Giant_Goldfish
+    {name: "Cheer Up Emo Kid", str: "#556270,#4ECDC4,#C7F464,#FF6B6B,#C44D58,#556270,#4ECDC4,#C7F464"}, // http://www.colourlovers.com/palette/1930/cheer_up_emo_kid
+    {name: "LoversInJapan by lovelyrita", str: "#E94E77,#D68189,#C6A49A,#C6E5D9,#F4EAD5"}, // http://www.colourlovers.com/palette/867235/LoversInJapan
+    {name: "Ocean Five by DESIGNJUNKEE", str: "#00A0B0,#6A4A3C,#CC333F,#EB6841,#EDC951"}, // http://www.colourlovers.com/palette/1473/Ocean_Five
+    {name: "Entrapped InAPalette by annajak", str: "#B9D7D9,#668284,#2A2829,#493736,#7B3B3B"}, // 
+    {name: "mellon ball surprise by Skyblue2u", str: "#D1F2A5,#EFFAB4,#FFC48C,#FF9F80,#F56991"}, //
+    {name: "fresh cut day by electrikmonk", str: "#00A8C6,#40C0CB,#F9F2E7,#AEE239,#8FBE00"}  // 
+
+
+  ];
+
 var useFeltTip = false;
 
 var gPlanLocked;
 var gPlanPrevious;
-var gColorsLocked;
-var gColorsPrevious;
+var gPaletteLocked;
+var gPalettePrevious;
 
 function setup() {
   var limit = min(windowWidth, windowHeight);
@@ -50,13 +60,14 @@ function draw() {
   var margin = 20;
   
   var plan = gPlanLocked? gPlanLocked : planMondrian({ x: margin, y: margin }, width - margin * 2, seed);
-  var colors = gColorsLocked ? gColorsLocked : random(paletteStrs).split(",");  
   
-  console.log('plan is: ', plan);
+  var palette = gPaletteLocked ? gPaletteLocked : random(palettes.slice(0,3));
+  var colors = palette.str.split(",");
+  console.log("palette is ", palette.name, " and plan is: ", plan);
 
   drawMondrianFromPlan(colors, plan);
   gPlanPrevious = plan;
-  gColorsPrevious = colors;
+  gPalettePrevious = palette;
 }
 
 function planMondrian(pos, dim, seed, horizs, verts) {
@@ -188,7 +199,7 @@ function lockPlan() {
 }
 
 function lockColors() {
-  gColorsLocked = gColorsPrevious;
+  gPaletteLocked = gPalettePrevious;
 }
 
 /* Code courtesy of http://stackoverflow.com/questions/12796513/html5-canvas-to-png-file*/
